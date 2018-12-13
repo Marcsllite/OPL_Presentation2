@@ -15,6 +15,12 @@ public:
 	virtual string toString() = 0;  // to string function for printing out
 };
 
+class STORE {  // S = store that holds all pointer mappings
+ public:
+    virtual string toString() = 0;  // to string function for printing out
+    virtual EXPRESSION *search(EXPRESSION *toFind) = 0;  // search/lookup function to find pointer value in store
+};
+
 class ENVIRONMENT {  // E = * | E[x -> v]
 public:
 	virtual string toString() = 0;  // to string function for printing out
